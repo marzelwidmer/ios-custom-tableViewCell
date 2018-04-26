@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let elements = ["cat", "horse", "dog", "potato"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
