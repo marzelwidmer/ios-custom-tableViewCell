@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
