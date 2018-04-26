@@ -8,20 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let elements = ["cat", "horse", "dog", "potato"]
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return elements.count
     }
-
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        cell.animalLbl.text = elements[indexPath.row]
+        cell.animalImage.image = UIImage(named: elements[indexPath.row])
+        return cell
+    }
 
 }
 
