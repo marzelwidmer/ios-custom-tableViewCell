@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="dYl-31-mfn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="100" id="dYl-31-mfn" customClass="CustomTableViewCell" customModule="CustomTableViewCell" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dYl-31-mfn" id="c53-O2-51I">
@@ -50,6 +50,11 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImage" destination="4el-kV-zqM" id="e9S-58-UUD"/>
+                                            <outlet property="animalLbl" destination="djf-j5-GT3" id="YzU-7Z-7ra"/>
+                                            <outlet property="cellView" destination="pDh-NW-dC1" id="LZE-VL-ssn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
