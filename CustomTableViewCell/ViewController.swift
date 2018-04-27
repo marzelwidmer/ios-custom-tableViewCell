@@ -15,16 +15,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return elements.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
