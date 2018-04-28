@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let elements = ["cat", "horse", "dog", "potato"]
+    let elements = ["Me-After-Bootcamp", "cat", "horse", "dog", "potato", "meAndBasco", "amo", "cat", "horse", "dog", "potato", "meAndBasco", "amo"]
 
     @IBOutlet weak var tableView: UITableView!
     
