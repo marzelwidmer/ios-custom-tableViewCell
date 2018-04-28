@@ -18,15 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-   
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return elements.count
     }
@@ -37,8 +30,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        
+        cell.cellView.layer.cornerRadius = cell.cellView.frame.height / 2
+        
         cell.animalLbl.text = elements[indexPath.row]
         cell.animalImage.image = UIImage(named: elements[indexPath.row])
+        cell.animalImage.layer.cornerRadius = cell.animalImage.frame.height / 2
+        
         return cell
     }
 
